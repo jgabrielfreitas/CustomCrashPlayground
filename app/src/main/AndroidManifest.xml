@@ -15,7 +15,12 @@
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
     </activity>
-    <activity android:name=".CustomCrashActivity">
+    <activity android:name=".CustomCrashActivity"
+        android:label="@string/title_oh_no"
+        android:process=":error_activity">
+      <intent-filter>
+        <action android:name="cat.ereza.customactivityoncrash.ERROR" />
+      </intent-filter>
     </activity>
   </application>
 

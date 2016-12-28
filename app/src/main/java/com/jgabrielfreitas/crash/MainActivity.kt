@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     //Install CustomActivityOnCrash
     CustomActivityOnCrash.install(this)
     CustomActivityOnCrash.setShowErrorDetails(false)
-    CustomActivityOnCrash.setRestartActivityClass(CustomCrashActivity::class.java)
+    CustomActivityOnCrash.setErrorActivityClass(CustomCrashActivity::class.java)
 
     crashButton.setOnClickListener { throw RuntimeException("FUUUUUCK") }
   }
